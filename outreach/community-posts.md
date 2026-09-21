@@ -16,9 +16,71 @@ Posting approach:
 
 - Be transparent that this is your open-source project.
 - Post only where project/self-promotion rules allow it.
-- If a community dislikes standalone project posts, use the shorter reply draft only when someone is already asking about LiTime Bluetooth monitoring, remote battery visibility, or ESP32 battery projects.
+- If a community dislikes standalone project posts, use the shorter reply draft only when someone is already asking about LiTime Bluetooth monitoring, remote battery visibility, weak Bluetooth range, app limitations, RV remote monitoring, marine battery boxes, or ESP32 battery projects.
 - Do not imply this is a safety system or a replacement for a shunt, BMS, fuse, charger, or disconnect.
 - Lead with what people can do, not hype.
+- Space posts out. Start with 3-5 best-fit communities, answer follow-up questions there, then post elsewhere only when you can tailor the context.
+
+## Best Places To Post
+
+Use this as the working plan. "New thread" means the project is likely useful enough to introduce directly if the community rules allow it. "Helpful reply" means wait for an existing thread where the problem already matches the project.
+
+| Priority | Place | Why it fits | Best action | Use this draft |
+|---|---|---|---|---|
+| 1 | DIY Solar Power Forum | DIY builders are comfortable with ESP32, BMS telemetry, Solar Assistant, Bluetooth proxies, and open-source monitoring. This is the highest-signal technical audience. | New thread in a battery/BMS/DIY monitoring area, after checking forum rules. | `DIY Solar Power Forum` |
+| 2 | Reddit r/SolarDIY | Active discussion around LiTime reliability, Bluetooth, cell-voltage visibility, shunts, and monitoring. | New thread if rules allow; otherwise reply in a monitoring/Bluetooth/LiTime thread. | `Reddit: r/SolarDIY` |
+| 3 | Victron Community | Strong fit for people who already understand monitoring stacks and want to bridge budget Bluetooth batteries into a visible dashboard. | Helpful reply first; new thread only if framed as "not replacing Victron monitoring." | `Victron Community` |
+| 4 | Reddit r/Victron | Good audience for mixed Victron + budget LiFePO4 systems, but avoid sounding like you are replacing SmartShunt/Cerbo. | Helpful reply or carefully framed new thread. | `Reddit: r/Victron` |
+| 5 | RVForums | Recent LiTime Bluetooth/overcharge-protection conversations make this useful for real RV owners. | Helpful reply in LiTime/Bluetooth threads; new thread if the electrical section allows project shares. | `RVForums` |
+| 6 | iRV2 | Large RV electrical audience with LiTime/lithium discussion. | Helpful reply first. Use a new thread only if you can place it in lithium/electrical mods. | `iRV2` |
+| 7 | Forest River Forums | Brand-specific RV owners discuss LiTime Bluetooth batteries and upgrades. | Helpful reply in lithium upgrade threads; avoid a broad standalone post. | `Forest River Forums` |
+| 8 | Alliance RV Owners Forum | Smaller but focused RV-owner audience with lithium install conversations. | Helpful reply first. | `Alliance RV Owners Forum` |
+| 9 | Reddit r/VanLife | Battery visibility is relevant, but general van communities are sensitive to self-promotion. | Helpful reply first; new post only if rules allow project/build writeups. | `Reddit: r/VanLife` |
+| 10 | Reddit r/vandwellers | Similar to r/VanLife; good fit for buried battery compartments and remote status. | Helpful reply first. | `Reddit: r/vandwellers` |
+| 11 | Reddit r/RVLiving | Good consumer RV audience. Less technical, so focus on beginner guide and read-only safety boundaries. | New thread if project posts are allowed; otherwise reply to LiTime purchase/monitoring threads. | `Reddit: r/RVLiving` |
+| 12 | Reddit r/GoRVing | Good for practical RV battery questions, but less technical than DIY Solar. | Helpful reply first. | `Reddit: r/GoRVing` |
+| 13 | T@B Forum | Indexed discussion says LiTime Bluetooth apps are not a full replacement for shunts, which is exactly the nuance the project should respect. | Helpful reply only. | Adapt `RVForums` |
+| 14 | Grand Design Owners Forum | Active RV electrical owners, LiTime Bluetooth threads, brand-specific. | Helpful reply only. | Adapt `RVForums` |
+| 15 | BassResource | Fishing audience with LiTime Bluetooth battery threads. Good if framed as battery-box visibility, not solar. | Helpful reply in LiTime/trolling-battery threads. | `BassResource` |
+| 16 | Reddit r/kayakfishing | Good for kayak/trolling batteries, especially when the battery is boxed away. | Helpful reply first; new post only if DIY electronics shares fit. | `Reddit: r/kayakfishing` |
+| 17 | Reddit r/jonboats | Small-boat/trolling battery fit. | Helpful reply first. | `Reddit: r/jonboats` |
+| 18 | Reddit r/boating | Broad boating audience; useful but easy to look off-topic. | Reply to LiTime/app/monitoring threads only. | `Reddit: r/boating` |
+| 19 | Skiff HQ Community | Specific trolling motor install conversations mention LiTime Bluetooth batteries. | Helpful reply only. | Adapt `Reddit: r/jonboats` |
+| 20 | In-Depth Outdoors | Fishing/outdoors forum with LiTime lithium discussion. | Helpful reply only. | `In-Depth Outdoors` |
+| 21 | Sailboat Owners | House battery monitoring fit, but conservative marine electrical audience. | Helpful reply only, with the safety caveat prominent. | `Sailboat Owners` |
+| 22 | LiTime official group/social community | Direct audience, but vendor-run spaces may moderate independent tools. | New post only if allowed; otherwise helpful reply. Make independence clear. | `LiTime Official Group` |
+
+## Best First Wave
+
+Start here before posting everywhere:
+
+1. DIY Solar Power Forum - most likely to care about the technical approach and improve it.
+2. r/SolarDIY - broad DIY solar audience with existing LiTime Bluetooth conversations.
+3. Victron Community or r/Victron - useful if framed as a read-only companion, not a Victron replacement.
+4. RVForums or iRV2 - reaches RV owners with real LiTime installs.
+5. BassResource or r/kayakfishing - tests whether the marine/trolling audience sees value.
+
+## Reply Triggers
+
+Use the short reply version when a conversation includes any of these:
+
+- "LiTime Bluetooth range is weak"
+- "LiTime app is inconvenient"
+- "How do I monitor this battery remotely?"
+- "Can I see cell voltages without opening the app?"
+- "Battery is buried in a compartment/box"
+- "I wish this worked with Home Assistant/Solar Assistant/a browser"
+- "ESP32 Bluetooth monitor"
+- "I do not want port forwarding"
+
+## Do Not Post Yet
+
+Skip these unless someone specifically asks:
+
+- Generic battery brand comparison threads where nobody mentions monitoring.
+- Safety-critical troubleshooting where the right answer is support, a shunt, meter testing, charger settings, or professional help.
+- Communities whose rules clearly ban project links or self-promotion.
+- Threads where the user needs warranty help, battery replacement, or LiTime support escalation.
 
 ## Source Notes
 
