@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Build a read-only ESP32 gateway for Bluetooth LiTime batteries with local Wi-Fi setup and an optional Cloudflare remote dashboard."
+    />
+    <meta property="og:title" content="LiTime ESP32 Gateway" />
+    <meta
+      property="og:description"
+      content="A small open-source ESP32 project that turns LiTime Bluetooth battery data into a local and remote read-only dashboard."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="remote-dashboard-preview.jpeg" />
+    <title>LiTime ESP32 Gateway</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="LiTime ESP32 Gateway home">
+        <span class="brand-mark">LT</span>
+        <span>LiTime ESP32 Gateway</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#build">Build it</a>
+        <a href="#why">Why</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Open-source battery monitor</p>
+          <h1>Put your LiTime battery status on a clean web dashboard.</h1>
+          <p class="lede">
+            Flash an ESP32, connect it to a Bluetooth LiTime battery, and get a read-only local
+            dashboard. Add the optional Cloudflare Worker to check it remotely without opening a
+            router port.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/TristanEDU/litime-esp32-gateway/blob/main/setup.md">Follow the setup guide</a>
+            <a class="button secondary" href="https://github.com/TristanEDU/litime-esp32-gateway">View the GitHub repo</a>
+          </div>
+          <ul class="quick-points" aria-label="Project highlights">
+            <li>No port forwarding</li>
+            <li>No battery controls</li>
+            <li>Works from a setup Wi-Fi AP</li>
+            <li>Optional remote page on Cloudflare</li>
+          </ul>
+        </div>
+        <figure class="hero-media">
+          <img src="remote-dashboard-preview.jpeg" alt="Remote LiTime battery dashboard showing pack details and relay status" />
+          <figcaption>Remote dashboard before the ESP32 connects.</figcaption>
+        </figure>
+      </section>
+
+      <section id="build" class="band">
+        <div class="section-heading">
+          <p class="eyebrow">Direct path</p>
+          <h2>Build it in one sitting.</h2>
+          <p>
+            The guide is written for someone who has never flashed an ESP32 or deployed a Worker.
+            It starts at downloading the repo and ends at checking the remote dashboard.
+          </p>
+        </div>
+        <div class="steps">
+          <article>
+            <span>1</span>
+            <h3>Flash the ESP32</h3>
+            <p>Install Arduino CLI, plug in the board, run the included scripts, and save the setup password printed on first boot.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Join the setup Wi-Fi</h3>
+            <p>Use the ESP32 access point to scan for your home Wi-Fi, save it, and confirm local battery telemetry.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Add remote viewing</h3>
+            <p>Deploy the included Cloudflare Worker, add one device token, and let the ESP32 connect outward over WebSocket.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split">
+        <div>
+          <p class="eyebrow">Local first</p>
+          <h2>The ESP32 serves its own setup page.</h2>
+          <p>
+            You do not need a finished network setup to begin. The gateway starts a unique Wi-Fi
+            access point, serves the local dashboard, and keeps that AP available after it joins
+            your normal network.
+          </p>
+          <a class="text-link" href="https://github.com/TristanEDU/litime-esp32-gateway/blob/main/setup.md#8-join-the-gateway-setup-wi-fi">Jump to Wi-Fi setup</a>
+        </div>
+        <figure class="framed-image">
+          <img src="local-gateway-wifi-setup.jpeg" alt="Local ESP32 gateway page with Wi-Fi setup controls" />
+        </figure>
+      </section>
+
+      <section id="why" class="band quiet">
+        <div class="section-heading">
+          <p class="eyebrow">Why this exists</p>
+          <h2>The LiTime app is fine when you are nearby. It does not solve remote visibility.</h2>
+          <p>
+            RVs, vans, boats, sheds, and off-grid boxes often need a quick answer: is the battery
+            charging, discharging, balanced, or disconnected? This project keeps that answer
+            visible without giving the internet any control over the battery.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <h3>Read-only by design</h3>
+            <p>It exposes status, cell voltages, temperatures, current, state of charge, and runtime estimates. It does not expose charge or discharge controls.</p>
+          </article>
+          <article>
+            <h3>No inbound network hole</h3>
+            <p>The optional remote dashboard uses an outbound ESP32 connection to Cloudflare, so normal home, marina, campground, and Starlink networks can work.</p>
+          </article>
+          <article>
+            <h3>Built for tinkerers</h3>
+            <p>The repo includes firmware, the local web UI, the Cloudflare Worker, and a beginner setup guide with screenshots.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="audience">
+        <div class="section-heading">
+          <p class="eyebrow">Good fit</p>
+          <h2>Useful when the battery is somewhere you are not.</h2>
+        </div>
+        <ul>
+          <li>RV and travel trailer owners checking house batteries from inside or away from the rig.</li>
+          <li>Vanlife builds where the battery is buried under cabinetry.</li>
+          <li>Small boats, kayaks, and trolling motor setups with Bluetooth LiTime batteries.</li>
+          <li>Cabins, sheds, and off-grid systems where a phone app is too local.</li>
+          <li>DIY solar builders who want a hackable bridge before buying a full monitoring stack.</li>
+        </ul>
+      </section>
+
+      <section id="faq" class="faq">
+        <div class="section-heading">
+          <p class="eyebrow">Plain answers</p>
+          <h2>Before you start.</h2>
+        </div>
+        <details open>
+          <summary>Does this replace a shunt or a safety system?</summary>
+          <p>No. It is a monitoring project. Keep real protection, fusing, chargers, and disconnects in the electrical system.</p>
+        </details>
+        <details>
+          <summary>Does this require a public ESP32 IP?</summary>
+          <p>No. The remote dashboard uses an outbound connection from the ESP32 to Cloudflare.</p>
+        </details>
+        <details>
+          <summary>Can a beginner follow it?</summary>
+          <p>That is the point. The setup guide starts with tool installation and includes screenshots of the pages you should see.</p>
+        </details>
+        <details>
+          <summary>What battery models does it target?</summary>
+          <p>The firmware targets Bluetooth LiTime batteries using the LiTime BLE read path implemented in the repo.</p>
+        </details>
+      </section>
+
+      <section class="final-cta">
+        <p class="eyebrow">Start here</p>
+        <h2>Open the guide, flash the board, and get a battery dashboard running.</h2>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/TristanEDU/litime-esp32-gateway/blob/main/setup.md">Follow the setup guide</a>
+          <a class="button secondary" href="https://github.com/TristanEDU/litime-esp32-gateway">Star or fork the repo</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>LiTime ESP32 Gateway is an independent open-source project. It is not affiliated with LiTime.</p>
+    </footer>
+  </body>
+</html>
